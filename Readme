@@ -1,0 +1,155 @@
+AKAI Mpk mini mkII Bitwig Controller Script
+===========================================
+Based on previous work by Enrico Bragante (https://github.com/trixtan/MpkMiniMkIIBC)
+Updated for Bitwig 2.3.2
+by Jan De Pue
+Let me know if you have comments/recommendations
+Enjoy!!
+
+=============== INSTRUCTIONS ===================
+Set the 3 programs with the MPK mapping editor according to the programs in ../MPKeditor/Program_x.mpk
+Copy the folder containing MPKminiMkII_JDP.control.js and MPKminiMkII_JDP.mapping.js
+to ../Bitwig Studio/Controller Scripts/
+Cross your fingers.
+
+================= PROGRAM 1 ====================
+
+### Joystick
+- LEFT/RIGHT: -
+- UP/DOWN: Pitchbend
+VERSION 3.0
+
+### Pads CC Mode
+```
+Bank A                                         Bank B
+|---------|---------|---------|---------|      |---------|---------|---------|---------|
+| ARM     | SOLO    | MUTE    | TRACK   |      | TAP     |         | PADS    | PREVIOUS|
+| TRACK   | TRACK   | TRACK   | UP      |      | TEMPO   |         | UP      | REM CONT|
+|         |         |         |         |      |         |         |         | PAGE    |
+|---------|---------|---------|---------|      |---------|---------|---------|---------| 
+|TRANSPORT|TRANSPORT|TRANSPORT| TRACK   |      | TOGGLE  |         | PADS    | NEXT    |
+| STOP    | PLAY    | REC     | DOWN    |      | METRONM |         | DOWN    | REM CONT|
+|         |         |         |         |      |         |         |         | PAGE    |
+|---------|---------|---------|---------|      |---------|---------|---------|---------|
+```
+### Pads PROG CHANGE Mode
+```
+Bank A                                         Bank B
+|---------|---------|---------|---------|      |---------|---------|---------|---------|
+|INSPECTOR|PER-     | EDIT    | BROWSER |      | START   | DEVICE  | DEVICE  | PREVIOUS|
+|         | SPECTIVE|         |         |      | BROWSING| PRESET  | UP      | REM CONT|
+|         |         |         |         |      |         | UP      |         | PAGE    |
+|---------|---------|---------|---------|      |---------|---------|---------|---------| 
+| NOTE    | AUTO-   | MIXER   | DEVICE  |      | COMMIT  | DEVICE  | DEVICE  | NEXT    |
+|         |  MATION |         |         |      | BROWSING| PRESET  | DOWN    | REM CONT|
+|         |         |         |         |      |         | DOWN    |         | PAGE    |
+|---------|---------|---------|---------|      |---------|---------|---------|---------|
+```
+### Knobs
+```
+  /---\     /---\     /---\     /---\
+  | 1 |     | 2 |     | 3 |     | 4 |
+  \---/     \---/     \---/     \---/
+ Device     Device    Device    Device
+ RC 1       RC 2      RC 3      RC 4
+
+  /---\     /---\     /---\     /---\
+  | 5 |     | 6 |     | 7 |     | 8 |
+  \---/     \---/     \---/     \---/
+ Device     Device    Device    Device
+ RC 5       RC 6      RC 7      RC 8
+```
+
+
+================= PROGRAM 2 ====================
+
+### Joystick
+- LEFT/RIGHT: Move trackbank
+- UP/DOWN: Move trackbank
+
+### Pads CC Mode
+```
+Bank A                                         Bank B
+|---------|---------|---------|---------|      |---------|---------|---------|---------|
+| LAUNCH  | LAUNCH  | LAUNCH  | LAUNCH  |      | DELETE  | DELETE  | DELETE  | DELETE  |
+| SLOT 00 | SLOT 10 | SLOT 20 | SLOT 30 |      | SLOT 00 | SLOT 10 | SLOT 20 | SLOT 30 |
+|         |         |         |         |      |         |         |         |         |
+|---------|---------|---------|---------|      |---------|---------|---------|---------|
+| LAUNCH  | LAUNCH  | LAUNCH  | LAUNCH  |      | DELETE  | DELETE  | DELETE  | DELETE  |
+| SLOT 01 | SLOT 11 | SLOT 21 | SLOT 31 |      | SLOT 01 | SLOT 11 | SLOT 21 | SLOT 31 |
+|         |         |         |         |      |         |         |         |         |
+|---------|---------|---------|---------|      |---------|---------|---------|---------|
+```
+### Pads PROG CHANGE Mode
+```
+Bank A                                         Bank B
+|---------|---------|---------|---------|      |---------|---------|---------|---------|
+|INSPECTOR|PER-     | EDIT    | BROWSER |      | START   | DEVICE  | DEVICE  | PREVIOUS|
+|         | SPECTIVE|         |         |      | BROWSING| PRESET  | UP      | REM CONT|
+|         |         |         |         |      |         | UP      |         | PAGE    |
+|---------|---------|---------|---------|      |---------|---------|---------|---------| 
+| NOTE    | AUTO-   | MIXER   | DEVICE  |      | COMMIT  | DEVICE  | DEVICE  | NEXT    |
+|         |  MATION |         |         |      | BROWSING| PRESET  | DOWN    | REM CONT|
+|         |         |         |         |      |         | DOWN    |         | PAGE    |
+|---------|---------|---------|---------|      |---------|---------|---------|---------|
+```
+### Knobs
+```
+  /---\     /---\     /---\     /---\
+  | 1 |     | 2 |     | 3 |     | 4 |
+  \---/     \---/     \---/     \---/
+ Device     Device    Device    Device
+ RC 1       RC 2      RC 3      RC 4
+
+  /---\     /---\     /---\     /---\
+  | 5 |     | 6 |     | 7 |     | 8 |
+  \---/     \---/     \---/     \---/
+ Device     Device    Device    Device
+ RC 5       RC 6      RC 7      RC 8
+
+
+================= PROGRAM 3 ====================
+
+### Joystick
+- LEFT/RIGHT: Move trackbank
+- UP/DOWN: Move trackbank
+
+### Pads CC Mode
+```
+Bank A                                         Bank B
+|---------|---------|---------|---------|      |---------|---------|---------|---------|
+| OPEN/   | OPEN/   | OPEN/   | OPEN/   |      |  SOLO   |  SOLO   |  SOLO   |  SOLO   | 
+|  CLOSE  |  CLOSE  |  CLOSE  |  CLOSE  |      | TRACK_1 | TRACK 2 | TRACK 3 | TRACK 4 |
+| GROUP1  | GROUP2  | GROUP3  | GROUP4  |      |         |         |         |         | 
+|---------|---------|---------|---------|      |---------|---------|---------|---------| 
+|TRANSPORT|TRANSPORT|TRANSPORT| REC     |      |  MUTE   |  MUTE   |  MUTE   |  MUTE   | 
+| STOP    | PLAY    | REC     |  AUTO-  |      | TRACK_1 | TRACK 2 | TRACK 3 | TRACK 4 | 
+|         |         |         |  MATION |      |         |         |         |         |
+|---------|---------|---------|---------|      |---------|---------|---------|---------|
+```
+### Pads PROG CHANGE Mode
+```
+Bank A                                         Bank B
+|---------|---------|---------|---------|      |---------|---------|---------|---------|
+|INSPECTOR|PER-     | EDIT    | BROWSER |      | START   | DEVICE  | DEVICE  | PREVIOUS|
+|         | SPECTIVE|         |         |      | BROWSING| PRESET  | UP      | REM CONT|
+|         |         |         |         |      |         | UP      |         | PAGE    |
+|---------|---------|---------|---------|      |---------|---------|---------|---------| 
+| NOTE    | AUTO-   | MIXER   | DEVICE  |      | COMMIT  | DEVICE  | DEVICE  | NEXT    |
+|         |  MATION |         |         |      | BROWSING| PRESET  | DOWN    | REM CONT|
+|         |         |         |         |      |         | DOWN    |         | PAGE    |
+|---------|---------|---------|---------|      |---------|---------|---------|---------|
+```
+### Knobs
+```
+  /---\     /---\     /---\     /---\
+  | 1 |     | 2 |     | 3 |     | 4 |
+  \---/     \---/     \---/     \---/
+ VOLUME    VOLUME    VOLUME    VOLUME
+ TRACK 1   TRACK 2   TRACK 3   TRACK 4
+
+  /---\     /---\     /---\     /---\
+  | 5 |     | 6 |     | 7 |     | 8 |
+  \---/     \---/     \---/     \---/
+   PAN       PAN       PAN       PAN
+ TRACK 1   TRACK 2   TRACK 3   TRACK 4
