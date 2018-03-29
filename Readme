@@ -7,7 +7,8 @@ Let me know if you have comments/recommendations
 Enjoy!!
 
 =============== INSTRUCTIONS ===================
-Set the 3 programs with the MPK mapping editor according to the programs in ../MPKeditor/Program_x.mpk
+Set the 3 programs with the MPK mapping editor according to the programs in ../MPKeditor/ProgramX.mk2 (see also screenshots)
+The fourth program is not used in this script.
 Copy the folder containing MPKminiMkII_JDP.control.js and MPKminiMkII_JDP.mapping.js
 to ../Bitwig Studio/Controller Scripts/
 Cross your fingers.
